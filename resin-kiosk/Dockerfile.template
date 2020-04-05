@@ -1,5 +1,6 @@
 #FROM resin/rpi-node:0.10-wheezy
 FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:10.10-stretch-build as build
+#FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:10-stretch-run
 
 RUN apt-get update && apt-get install -yq --no-install-recommends \
 		chromium-browser \
@@ -22,7 +23,7 @@ WORKDIR /usr/src/app
 
 COPY package.json /usr/src/app/
 
-RUN npm install --production --unsafe-perm
+RUN JOBS=MAX npm install --production
 
 COPY . /usr/src/app
 
