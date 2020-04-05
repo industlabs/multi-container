@@ -18,7 +18,7 @@ services:
       - "/dev/gpiomem:/dev/gpiomem"
       - "/dev/i2c-1:/dev/i2c-1"
     ports:
-      - 1880:1880
+      - 80:80
   kiosk:
     restart: always
     build: ./kiosk/kiosk
