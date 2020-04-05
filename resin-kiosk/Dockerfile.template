@@ -28,7 +28,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
 		libical-dev libdbus-1-dev libglib2.0-dev libreadline-dev 
 
 RUN apt-get update && apt-get install -y curl 
-RUN curl -sl https://deb.nodesource.com/setup_10.x — Node.js 10 LTS "Dubnium"
+RUN curl -sl https://deb.nodesource.com/setup_10.x —
 #RUN curl -sL https://deb.nodesource.com/setup | bash - 
 RUN apt-get install -y nodejs 
 RUN apt-get install bzip2 
