@@ -18,11 +18,6 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
 		python-dev \
   		libatomic1 \
   		build-essential wget \
-  		libical-dev \
-		libdbus-1-dev \
-		libglib2.0-dev \
-		libreadline-dev \
-		libudev-dev \
 		systemd \
     		python \
 		g++ \
@@ -34,7 +29,8 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
 		cairo-dev \ 
 		pangomm-dev \ 
 		libjpeg-turbo-dev \ 
-		giflib-dev 
+		giflib-dev \
+		libical-dev libdbus-1-dev libglib2.0-dev libreadline-dev ibudev-dev \
 
 RUN mkdir -p /usr/src/app \
 	&& ln -s /usr/src/app /app
