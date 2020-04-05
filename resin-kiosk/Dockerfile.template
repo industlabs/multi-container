@@ -25,7 +25,6 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
 		gcc \
 		curl \
 		git \
-		giflib-dev \
 		libical-dev libdbus-1-dev libglib2.0-dev libreadline-dev ibudev-dev 
 
 RUN mkdir -p /usr/src/app \
