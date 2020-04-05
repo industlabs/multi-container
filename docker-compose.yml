@@ -3,7 +3,7 @@ volumes:
     resin-data:
 services:
   node-red:
-    build: ./node-red
+    build: ./node-red/node-red
     volumes:
       - 'resin-data:/data'
     restart: always
