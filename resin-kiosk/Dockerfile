@@ -1,4 +1,5 @@
-FROM resin/rpi-node:0.10-wheezy
+##FROM resin/rpi-node:0.10-wheezy
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:12-stretch-build as build
 
 RUN apt-get update \
 	&& apt-get upgrade -y \
