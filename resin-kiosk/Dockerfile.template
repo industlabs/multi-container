@@ -1,7 +1,11 @@
 #FROM resin/rpi-node:0.10-wheezy
 #FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:10.10-stretch-build as build
+
 FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:10-stretch-run
+
 RUN apt-get update && apt-get install -yq --no-install-recommends \
+		g++ \
+		make \
 		apt-utils \
 		chromium-browser \
 		fbset \
@@ -20,25 +24,38 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
   		build-essential \
 		systemd \
     		python \
-		g++ \
-		make \
 		gcc \
 		curl \
 		git \
 		libical-dev libdbus-1-dev libglib2.0-dev libreadline-dev 
-
+		
+		
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:10-stretch-run
 RUN apt-get update && apt-get install -y curl 
+
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:10-stretch-run
 RUN curl -sl https://deb.nodesource.com/setup_10.x —
+
 #RUN curl -sL https://deb.nodesource.com/setup | bash - 
+
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:10-stretch-run
 RUN apt-get install -y nodejs 
+
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:10-stretch-run
 RUN apt-get install bzip2 
+
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:10-stretch-run
 RUN curl -L https://npmjs.org/install.sh | sh 
+
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:10-stretch-run
 # Install bower
 RUN npm install -g bower 
 
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:10-stretch-run
 # Install Gulp
 RUN npm install -g gulp 
 
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-node:10-stretch-run
 # Install Git (for bower)
 RUN apt-get -y install git 
 
