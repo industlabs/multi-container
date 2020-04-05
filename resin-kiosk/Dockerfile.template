@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
 		xwit \
 		python-dev \
   		libatomic1 \
-  		build-essential wget \
+  		build-essential \
 		systemd \
     		python \
 		g++ \
@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
 		git \
 		libjpeg-turbo-dev \ 
 		giflib-dev \
-		libical-dev libdbus-1-dev libglib2.0-dev libreadline-dev ibudev-dev \
+		libical-dev libdbus-1-dev libglib2.0-dev libreadline-dev ibudev-dev 
 
 RUN mkdir -p /usr/src/app \
 	&& ln -s /usr/src/app /app
