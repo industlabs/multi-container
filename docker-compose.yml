@@ -21,7 +21,7 @@ services:
       - 1880:1880
   kiosk:
     restart: always
-    build: ./kiosk
+    build: ./kiosk/kiosk
     privileged: true
     ports:
       - 8080:8080
