@@ -1,7 +1,7 @@
 version: '2'
 volumes:
- resin-data:
- services:
+    resin-data:
+services:
   node-red:
     build: ./node-red
     volumes:
@@ -19,8 +19,7 @@ volumes:
       - "/dev/i2c-1:/dev/i2c-1"
     ports:
       - 80:80
-  services:
-    resin-kiosk:
-     build: ./resin-kiosk
-     expose:
-      - "8080"
+  resin-kiosk:
+    build: ./resin-kiosk
+    expose:
+      - "8080"     
